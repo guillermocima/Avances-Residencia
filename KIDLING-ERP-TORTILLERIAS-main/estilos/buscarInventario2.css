@@ -1,0 +1,269 @@
+/*profile*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+body{
+    display: flex;
+}
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 115px;
+    min-width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: #48247D;
+}
+
+.sidebar:hover{
+    width: 320px;
+    transition: 0.5s;
+}
+.logo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    border-radius: 10px;
+    width: 50px; /* Ancho deseado */
+    height: auto; /* Mantener la proporción original */
+    overflow: hidden; /* Para que la imagen no sobresalga */
+}
+
+.fondologo{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover,
+    .active{
+    background: #e0e0e058;
+}
+
+.menu a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span{
+    overflow: hidden;
+    
+
+}
+
+.menu a i{
+    font-size: 1rem;
+  }
+
+.logout{
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+}
+
+
+/**Main body section *** */
+.main--content{
+    position: relative;
+    background: #fff;
+    width: 100%;
+    height: auto;
+}
+
+.header--wrapper img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header--wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #252525;
+    width: 100%;
+    padding: 10px 2rem;
+    color: #fff;
+}
+
+/*INVENTARIO*/
+
+
+ table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: auto;
+    height: 70%;
+    margin-top: 0px;
+    padding: 10px;
+  } 
+  
+  th, td {
+    border: 2px solid #252525;
+    padding: 8px;
+    height: 10px;
+    text-align: center;
+    height: 70%;
+  }
+
+  .image-and-text {
+    background-color: #48247D;
+    color: #fff;
+    font-size: 20px;
+    /* width: 50px; */
+    height: 40px;
+    text-align: center;
+
+  } 
+
+  .grayed-out {
+    background-color: #f2f2f2;
+  }
+  /* Estilo del botón de regresar */
+  
+button.regresar {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    /* cursor: pointer; */
+    font-size: 14px;
+}
+
+button.regresar:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo general de la tabla */
+/* Contenedor principal */
+/* Contenedor principal para el cuadro */
+.cuadro-contenedor {
+    width: 90%; /* Ancho del contenedor del cuadro */
+    max-width: 900px; /* Ancho máximo del cuadro */
+    margin: 20px auto; /* Centrar el cuadro horizontalmente */
+    padding: 10px; /* Espacio interno del cuadro */
+    top: 20px;
+    /* border: 2px solid #252525; Borde del cuadro */
+    /* border-radius: 8px; Bordes redondeados */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); Sombra ligera */
+    position: relative; /* Para posicionar el botón "Regresar" */
+}
+
+/* Estilo para el título "Ventas del Día" */
+.titulo {
+    background-color: #48247D;
+    color: #fff;
+    font-size: 16px; /* Tamaño de la fuente */
+    text-align: center;
+    padding: 10px; /* Espaciado interno */
+    margin-top: -20px; /* Desplazar hacia arriba para pegarlo al cuadro */
+    border-radius: 8px 8px 0 0; Bordes redondeados solo en la parte superior
+    border-bottom: 2px solid #252525; Borde inferior para unir con el cuadro
+    width: calc(100% + 20px); /* Alinea con el cuadro */
+    position: relative;
+    left: -10px; /* Ajustar alineación */
+}
+
+/* Estilo del botón de regresar */
+button.regresar {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 8px; /* Tamaño del botón */
+    border: none;
+    border-radius: 5px;
+    font-size: 12px; /* Tamaño de la fuente */
+    position: absolute;
+    top: -15px; /* Coloca el botón sobre el cuadro */
+    left: 10px; /* Alinea a la izquierda dentro del cuadro */
+    z-index: 1; /* Asegura que esté sobre otros elementos */
+}
+
+button.regresar:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo general de la tabla */
+table {
+    width: 100%; /* Ancho completo dentro del cuadro */
+    border-collapse: collapse;
+    margin: 0px 0; /* Espaciado interno */
+}
+
+/* Ajustes en las celdas */
+table th, table td {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+
+/* iconos */
+/* Iconos de editar y eliminar */
+.icon-edit, .icon-delete {
+    display: inline-block;
+    width: 20px; /* Ancho del icono */
+    height: 20px; /* Alto del icono */
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: 0 5px; /* Espaciado entre iconos */
+}
+.icon-delete {
+    background-color: red;
+    border-radius: 33333333%;
+}
+
+/* Icono de editar */
+.icon-edit {
+    background-image: url('./imagenes/inventario.png'); /* Ruta de la imagen del icono de editar */
+}
+C:\laragon\www\EASYCODE\EasyCode\imagenes\inventario.png
+/* Icono de eliminar */
+.icon-delete {
+    background-image: url('imagenes/logo.jpg'); /* Ruta de la imagen del icono de eliminar */
+}
+/* C:\laragon\www\EASYCODE\EasyCode\imagenes\logo.jpg */
+
+/* Estilo para un efecto hover */
+.icon-edit:hover, .icon-delete:hover {
+    transform: scale(1.9); /* Efecto de zoom al pasar el mouse */
+}

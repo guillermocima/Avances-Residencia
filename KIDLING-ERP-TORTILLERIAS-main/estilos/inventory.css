@@ -1,0 +1,260 @@
+/*profile*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    display: flex;
+    color: #fff;
+}
+
+h3{
+    font-size: 30px;
+}
+.sidebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 115px;
+    min-width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: #48247D;
+}
+
+.sidebar:hover{
+    width: 320px;
+    transition: 0.5s;
+}
+.logo{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    border-radius: 10px;
+    width: 50px; /* Ancho deseado */
+    height: auto; /* Mantener la proporción original */
+    overflow: hidden; /* Para que la imagen no sobresalga */
+}
+
+.fondologo{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover,
+    .active{
+    background: #e0e0e058;
+}
+
+.menu a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span{
+    overflow: hidden;
+    
+
+}
+
+.menu a i{
+    font-size: 1rem;
+  }
+
+.logout{
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+}
+
+
+/**Main body section *** */
+.main--content{
+    position: relative;
+    background: #fff;
+    width: 100%;
+    height: auto;
+    
+}
+
+.header--wrapper img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header--wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #252525;
+    width: 100%;
+    padding: 10px 2rem;
+    color: #fff;
+}
+
+/*INVENTARIO*/
+.row {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;   
+    align-items: center;
+    
+}
+button{
+    background-color: #1D6ACA;
+    color: white;
+    border: none;
+    height: 35px;
+    width: 150px;
+    margin: 30px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+.inventory-container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+.card-container{
+    width: 100%;
+    flex-wrap: wrap; /* Permite que las filas se envuelvan en múltiples líneas */
+    display: flex;
+    flex-direction: column; /* Alinea las filas verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    width: 500px; /* Establecer el ancho de las tarjetas para que haya 3 tarjetas por fila, restando los márgenes */
+    max-width: 500px;
+    background-color: #252525;
+    margin: 20px;
+    height: 600px;
+    border-radius: 8px;
+    overflow: hidden; /* Para que la imagen no sobresalga */
+}
+
+.card-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    height: 100%;
+}
+
+.image-and-text {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 10px;
+}
+
+.header-content{
+    display: flex;
+    background-color: #48247D;
+    width: 100%;
+    height: auto;
+}
+
+.card-image img {
+    width: 100px; /* Ancho de la imagen */
+    height: auto; /* Ajusta la altura automáticamente */
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    margin-left: 10px;
+}
+
+.text {
+    text-align: center;
+}
+
+span{
+    font-size: 20px;
+    text-align: right;
+    margin-left:10px;
+    color: #fff;
+}
+
+input{
+    color: #fff;
+    width: 200px;
+    height: auto;
+    background-color: #48247D;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+#lista_sucursales{
+    background-color: #48247D;
+    color: #fff;
+    border-radius: 5px;
+    width: 200px;
+    font-size: 20px;
+}
+
+.requerido{
+    color: red;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.col3{
+    width: 35%;
+    margin-right: 10px;
+  }
+  
+.footerModal{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.grayed-out {
+    background-color: #564e62;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(100%);
+  }

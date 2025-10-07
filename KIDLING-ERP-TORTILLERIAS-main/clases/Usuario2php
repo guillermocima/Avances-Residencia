@@ -1,0 +1,52 @@
+<?php
+include_once("Conexion.php");
+
+class Usuario extends Conexion {
+    private $pdo;
+    public $nombre;
+    public $apellidos;
+    public $email;
+    public $password;
+    public $fechaRegistro;
+    public $tipo;
+
+    public function __construct($idUsuario) {
+        $this->pdo = new Conexion();
+        $this->idUsuario = $idUsuario;
+
+        try {
+            // Preparar la consulta
+            $sql = $this->pdo->prepare("SELECT * FROM dash_usuarios WHERE id = :idUsuario LIMIT 1");
+            
+            // Asociar el parámetro
+            $sql->bindParam(':idUsuario', $this->idUsuario, PDO::PARAM_INT);
+
+            // Ejecutar la consulta
+            $sql->execute();
+
+            // Verificar si se encontraron resultados
+            if ($sql->rowCount() > 0) {
+                // Obtener los datos del usuario
+                $datos = $sql->fetch(PDO::FETCH_ASSOC);
+
+                // Asignar los valores a las propiedades
+                $this->nombre = $datos["nombre"];
+                $this->apellidos = $datos["apellidos"];
+                $this->email = $datos["email"];
+                $this->password = $datos["password"];
+                $this->fechaRegistro = $datos["fechaRegistro"];
+                $this->tipo = $datos["tipo"];
+            } else {
+                // No se encontró ningún usuario con el ID proporcionado
+                throw new Exception("No se encontró ningún usuario con el ID proporcionado.");
+            }
+        } catch (PDOException $e) {
+            // Manejar errores de PDO
+            echo "Error al ejecutar la consulta: " . $e->getMessage();
+        } catch (Exception $e) {
+            // Manejar otros errores
+            echo "Error: " . $e->getMessage();
+        }
+    }
+}
+?>

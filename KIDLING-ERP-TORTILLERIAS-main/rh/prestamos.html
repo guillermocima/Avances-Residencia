@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Préstamos a Empleados - Tortillería</title>
+    <link rel="stylesheet" href="../../estilos/dashboardRH.css">
+    <link rel="stylesheet" href="../../estilos/prestamos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PRÉSTAMOS A EMPLEADOS</h1>
+        
+        <div class="formulario-prestamo">
+            <div class="form-group">
+                <label for="empleado">EMPLEADO:</label>
+                <select id="empleado" class="form-control">
+                    <option value="">Seleccione empleado...</option>
+                    <!-- Opciones se llenarán dinámicamente -->
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="dia">DÍA:</label>
+                <select id="dia" class="form-control">
+                    <option value="Lunes">Lunes</option>
+                    <option value="Martes">Martes</option>
+                    <option value="Miércoles">Miércoles</option>
+                    <option value="Jueves">Jueves</option>
+                    <option value="Viernes">Viernes</option>
+                    <option value="Sábado">Sábado</option>
+                    <option value="Domingo">Domingo</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="fecha">FECHA:</label>
+                <input type="date" id="fecha" class="form-control" value="<?php echo date('Y-m-d'); ?>">
+            </div>
+            
+            <div class="form-group">
+                <label for="cantidad">CANTIDAD:</label>
+                <input type="number" id="cantidad" class="form-control" step="0.01" min="0">
+            </div>
+            
+            <div class="form-group">
+                <label for="total">TOTAL:</label>
+                <input type="number" id="total" class="form-control" step="0.01" min="0" readonly>
+            </div>
+            
+            <div class="botones-accion">
+                <button id="btnGuardar" class="btn-primary">GUARDAR</button>
+                <button id="btnEditar" class="btn-secondary" disabled>EDITAR</button>
+            </div>
+        </div>
+        
+        <hr>
+        
+        <h2>REGISTRO DE PRÉSTAMOS</h2>
+        
+        <div class="filtros">
+            <input type="text" id="buscarPrestamo" placeholder="Buscar préstamo...">
+            <select id="filtroEmpleado">
+                <option value="">Todos los empleados</option>
+            </select>
+        </div>
+        
+        <table id="tablaPrestamos">
+            <thead>
+                <tr>
+                    <th>EMPLEADO</th>
+                    <th>DÍA</th>
+                    <th>FECHA</th>
+                    <th>CANTIDAD</th>
+                    <th>TOTAL</th>
+                    <th>ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Datos se cargarán dinámicamente -->
+            </tbody>
+        </table>
+        
+        <div class="paginacion">
+            <span id="infoPagina">1 / 1</span>
+            <button id="btnAnterior" disabled>◄</button>
+            <button id="btnSiguiente" disabled>►</button>
+        </div>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="scripts/prestamos.js"></script>
+</body>
+</html>

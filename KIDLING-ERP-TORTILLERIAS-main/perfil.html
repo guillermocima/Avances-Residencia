@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PERFIL</title>
+        <link rel="stylesheet" href="estilos/profile.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    </head>   
+
+    <body>
+            
+    <div class="sidebar">
+        <div class="fondologo"> <img class="logo" src="imagenes/logo.jpg"></div>
+        <ul class="menu">
+            <li>
+                <a href="/index.html">
+                    <i class="fas fa-home icon"></i>
+                    <span>INICIO</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="/perfil.html">
+                    <i class="fas fa-user"></i>
+                   <span>PERFIL</span> 
+                </a>
+            </li>
+            <li>
+                <a href="/mensajes.html">
+                    <i class="fas fa-envelope"></i>
+                    <span>MENSAJES</span> 
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--Fin de menu-->
+
+    <!--Header-->
+    <div class="main--content">
+        <div class="header--wrapper">
+                <h2>PERFIL</h2>
+            <img src="/imagenes/user.png">
+        </div>
+    
+
+    <!--Inicio de perfil-->
+    <div class="regresarButton">
+        <button onclick="irAlDashboard()">REGRESAR</button>
+    </div>
+    
+    <div class="profile-edit-container">
+        <div class="profile-image">
+            <img src="/imagenes/user.png" alt="Foto de perfil" id="profile-image">
+            <!-- Input de tipo file oculto -->
+            <input type="file" id="profile-image-upload" accept="image/*" style="display: none;">
+        </div>
+        <div class="buttons">
+            <button id="upload-button">SUBIR</button>
+            <button id="save-button">GUARDAR</button>
+            <button id="cancel-button">CANCELAR</button>
+        </div>
+    </div>
+    
+    <div>
+        <div class="footer"> 
+            <span>USUARIO:</span>
+            <input type="text" class="input-field">
+        </div>
+    </div>
+    
+    
+    </div><!--main content-->
+    
+
+
+    <!--Fin header-->
+
+    
+
+    <!--Librerias para los iconos-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/js/editProfile.js"></script>
+    </body>
+</html>

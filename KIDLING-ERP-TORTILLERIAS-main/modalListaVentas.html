@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LISTA DE VENTAS DEL DÍA</title>
+        <link rel="stylesheet" href="estilos/ventasDia.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    </head>   
+
+    <body>
+            
+    <div class="sidebar">
+        <div class="fondologo"> <img class="logo" src="imagenes/logo.jpg"></div>
+        <ul class="menu">
+                  
+            <li>
+                <a href="/index.html">
+                    <i class="fas fa-home icon"></i>
+                    <span>INICIO</span>
+                </a>
+            </li>
+            <li>
+                <a href="/perfil.html">
+                    <i class="fas fa-user"></i>
+                   <span>PERFIL</span> 
+                </a>
+            </li>
+            <li>
+                <a href="/mensajes.html">
+                    <i class="fas fa-envelope"></i>
+                    <span>MENSAJES</span> 
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <!--Fin de menu-->
+
+    <!--Header-->
+    <div class="main--content">
+        <div class="header--wrapper">
+                <h2>LISTA DE VENTAS DEL DÍA</h2>
+            <img src="/imagenes/user.png">
+        </div>
+    
+
+    <!--Inicio de lista de ventas del día-->
+    <div class="row">
+        <div class="regresarButton">
+            <button onclick="irAlDashboard()">REGRESAR</button>
+        </div>
+    </div>
+
+    <!--Tabla-->
+      <table>
+        <caption>VENTAS DEL DÍA</caption>
+        <tr>
+          <th>FECHA</th>
+          <th>KG</th>
+          <th>PRECIO</th>
+        </tr>
+        
+        <!-- Puedes agregar más filas aquí -->
+      </table>
+    <!---->
+    
+    </div><!--main content-->
+    
+    <!--Fin header-->    
+
+    <!--Librerias para los iconos-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="/js/funciones.js"></script>
+    </body>
+</html>

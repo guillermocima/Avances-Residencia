@@ -1,0 +1,157 @@
+                                          <!-- modal.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ventana Modal</title>
+  <style>
+    /* Estilos para el modal */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+    .modal {
+      display: none; /* Oculta el modal por defecto */
+      position: fixed; /* Permite que el modal sea posicionado en relación al viewport */
+      z-index: 1; /* Asegura que el modal esté por encima de otros elementos */
+      left: 0;
+      top: 0;
+      width: 100%; /* Toma todo el ancho de la pantalla */
+      height: 100%; /* Toma toda la altura de la pantalla */
+      overflow: auto; /* Añade desplazamiento si el contenido del modal es demasiado grande */
+      background-color: rgba(57, 4, 93, 0.4); /* Color de fondo semi-transparente */
+    }
+
+    /* Estilos para el contenido del modal */
+    .modal-content {
+      background-color: #252525;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      margin: 15% auto; /* Centra vertical y horizontalmente */
+      padding: 20px;
+      width: 450px; /* Ancho del contenido del modal */
+      height: 270px;
+      border-radius: 20px;
+    }
+
+    
+    .linea{
+      border-top: 1px solid white; /* Estilo del borde */
+      margin: 10px;
+    }
+
+    .rowModal{
+      display: flex;
+      margin-top: 15px;
+      width: 100%;   
+      align-items: center;
+    }
+
+    .rowModal span {
+      font-size: 17px;
+      text-align: right;
+      margin-left:10px;
+    }
+
+    .rowModal input {
+      width: 160px;
+      height: auto;
+      font-size: 17px;
+      border: none;
+      border-radius: 5px; /* Bordes redondeados */
+    }
+
+    
+    .botonModal{
+      background-color: #1D6ACA;
+      border: none;
+      height: 35px;
+      width: 100px;
+      color: white;
+      margin-top: 15px;
+      cursor: pointer;
+      border-radius: 10px;
+      font-size: 17px;
+    }
+  
+
+    .save:hover{
+      background-color: rgb(82, 130, 35);
+    }
+
+    /* Estilos para el botón de cierre */
+  .closeModal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .closeModal:hover{
+    color: red;
+  }
+
+  .col3{
+  width: 35%;
+  margin-right: 10px;
+}
+
+.footerModal{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+  </style>
+</head>
+<body>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <!-- Botón de cierre -->
+      <span class="closeModal">&times;</span>
+      <h2 style="text-align: center;">VENTAS DEL DÍA</h2>
+
+      <div class="linea"></div>
+      <div class="rowModal">
+        <span class="col3">TORTILLA VENDIDA:</span>
+        <input type="text">
+        <span>KG</span>
+      </div>
+
+      <div class="rowModal">
+        <span class="col3">PRECIO:</span>
+        <input type="text">
+        <span>$MXN</span>
+      </div>
+
+      <div class="rowModal">
+        <span class="col3">FECHA:</span>
+        <input type="date" id="inputFechaVentas">  
+      </div>
+
+      <div class="rowModal footerModal">
+        <button class="botonModal save">GUARDAR</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript para cerrar el modal al hacer clic en la "X"
+    var modal = document.getElementById("myModal");
+    var closeBtn = document.getElementsByClassName("closeModal")[0];
+
+    closeBtn.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // Cierra el modal al hacer clic fuera del contenido del modal
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
